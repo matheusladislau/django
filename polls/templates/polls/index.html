@@ -7,6 +7,11 @@
   <br>
   <a href="{% url 'url_create' %}"> Criar produto </a>
 
+  <ul>
+    {% for i in produtos %}
+      <li>{{i}}, {{i.valor}}, {{i.descricao}} {{url_update}}</li>
+    {% endfor %}
+  </ul>
 
   </body>
 </html>
