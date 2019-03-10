@@ -18,11 +18,12 @@ from django.urls import path
 from polls.views import index
 from polls.views import createProduto
 from polls.views import updateProduto
-
+from polls.views import deleteProduto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',index,name='url_index'),
     path('create/',createProduto,name='url_create'),
     path('update/<int:pk>/',updateProduto,name='url_update'),
+    path('delete/<int:pk>/',deleteProduto,name='url_delete'),
 ]

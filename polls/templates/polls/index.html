@@ -9,7 +9,10 @@
 
   <ul>
     {% for i in produtos %}
-      <li>{{i}}, {{i.valor}}, {{i.descricao}} <a href="{% url 'url_update' i.id %}">editar</a></li>
+      <li>{{i}}, {{i.valor}}, {{i.descricao}}
+        <a href="{% url 'url_update' i.id %}">editar</a>
+        <a href="{% url 'url_delete' i.id %}">remover</a>
+      </li>
     {% endfor %}
   </ul>
 

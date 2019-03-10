@@ -34,3 +34,9 @@ def updateProduto(request,pk):
         return redirect('url_index')
     data['form']=form
     return render(request,'polls/create.html',data)
+
+
+def deleteProduto(request,pk):
+    produto=Produto.objects.get(pk=pk)
+    produto.delete()
+    return redirect('url_index')
