@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from polls.views import index
+from polls.views import createProduto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',index,name='url_index'),
+    path('create/',createProduto,name='url_create'),
 ]

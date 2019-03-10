@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Criar Produto</title>
+  </head>
+
+  <body>
+    <h1>Criar Produto</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+
+      <button type="submit">
+        Salvar
+      <button>
+    </form>
+
+    <a href="{% url 'url_index' %}"> Voltar </a>
+  </body>
+</html>
