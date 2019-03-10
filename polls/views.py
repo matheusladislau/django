@@ -40,3 +40,17 @@ def deleteProduto(request,pk):
     produto=Produto.objects.get(pk=pk)
     produto.delete()
     return redirect('url_index')
+
+
+def home(request):
+    data={}
+    data['now'] = datetime.datetime.now()
+    data['transacoes']=['t1','t2']
+    return render(request,'contas/home.html',data)
+
+
+def home2(request):
+    now = datetime.datetime.now()
+    # html = "<html><body>It is now %s.</body></html>" % now
+    # return HttpResponse(html)
+    return render(request,'contas/home.html')

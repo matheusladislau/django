@@ -1,0 +1,41 @@
+.green{
+  background-color: green;
+  height: 30px;
+}
+
+
+.blue{
+  background-color: blue;
+  height: 30px;
+}
+
+.red{
+  background-color: red;
+  height: 30px;
+}
+
+.yellow{
+  background-color: yellow;
+  height: 30px;
+}
+
+.grey{
+  background-color: grey;
+  height: 30px;
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
