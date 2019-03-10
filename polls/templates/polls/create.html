@@ -1,20 +1,61 @@
 <html>
+  {% load static %}
   <head>
-    <title>Criar Produto</title>
+    <title>Cadastrar Produto</title>
+    <!-- fadding -->
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css//bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
   </head>
 
   <body>
-    <h1>Criar Produto</h1>
+    <div class="container-fluid text-light bg-primary text-center top">
+      <br>
+      <h2>Gerenciar Produtos</h2>
+    </div>
 
-    <form method="POST">
-      {% csrf_token %}
-      {{form.as_p}}
+    <br>
 
-      <button type="submit">
-        Salvar
-      <button>
-    </form>
+    <!-- <div class="container">
+      <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
 
-    <a href="{% url 'url_index' %}"> Voltar </a>
+        <button type="submit"class="btn btn-success">
+          Salvar
+        </button>
+      </form>
+    </div> -->
+
+
+    <div class="container">
+      <form action="{% url 'url_create' %}" method="post">
+        {% csrf_token %}
+
+        <label class="offset-md-4 col-md-2">Nome do Produto</label>
+        {{ form.nome }}
+
+        <label class="offset-md-4 col-md-2">Descrição do Produto</label>
+        {{ form.descricao }}
+
+        <label class="offset-md-4 col-md-2">Valor do Produto</label>
+        {{ form.valor }}
+
+        <label class="offset-md-4 col-md-2">Data de criação</label>
+        {{ form.dt_criacao }}
+
+        <br>
+        <input type="submit" value="Cadastrar Produto" class="btn btn-success offset-md-5" role="button">
+      </form>
+    </div>
+
+      <div class="container offset-md-4">
+        <a href="{% url 'url_index' %}" class="btn btn-secondary" role="button">Voltar</a>
+      </div>
+
   </body>
 </html>

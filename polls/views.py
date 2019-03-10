@@ -33,7 +33,7 @@ def updateProduto(request,pk):
         form.save()
         return redirect('url_index')
     data['form']=form
-    return render(request,'polls/create.html',data)
+    return render(request,'polls/update.html',data)
 
 
 def deleteProduto(request,pk):
